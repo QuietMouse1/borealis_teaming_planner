@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<launch>
+   
+  <arg name="uav_name_3" default="uav3"/>
+  <group ns="$(arg uav_name_3)">
+    <node name="borealis_teaming_planner" pkg="borealis_teaming_planner" type="borealis_teaming_planner_node" output="screen" clear_params="true">
+
+      <rosparam command="load" file="$(find borealis_teaming_planner)/config/teaming_planner_config_uav3.yaml"/>
+      <remap from="/activate_planner" to="teaming_planner/activate_planner"/>
+      <remap from="/assigned_virtual_position_rf" to="borealis_teaming_planner/assigned_position_output"/>
+      <remap from="/assigned_virtual_pose_map_rf" to="borealis_teaming_planner/assigned_virtual_pose_map_rf"/>
+      <remap from="/convex_region_2D_rf" to="borealis_teaming_planner/convex_region_2D_rf"/>
+      <remap from="/convex_region_3D_rf" to="borealis_teaming_planner/convex_region_3D_rf"/>
+      <remap from="/direction_utility_rf" to="borealis_teaming_planner/direction_utility_rf"/>
+      <remap from="/phase_and_time_rf" to="borealis_teaming_planner/phase_and_time_rf"/>
+      <remap from="/system_pose_rf" to="borealis_teaming_planner/system_pose_rf"/>
+      
+      <remap from="/pointcloud" to="/uav3_object_filter/filtered_point_cloud"/>
+      <remap from="/pointcloudmap" to="/uav3_occupancy_map/visualize_pointcloud"/>
+      <remap from="/voxel_filter_cloud" to="borealis_teaming_planner/voxel_filter_cloud"/>
+
+      <remap from="/system_pose_uwb" to="/UAV3PoseUWB"/>
+      <remap from="/system_pose" to="mavros/local_position/pose"/> 
+      <remap from="/phase_and_time_cp" to="borealis_teaming_planner/phase_and_time_cp"/>
+      <remap from="/system_pose_cp" to="borealis_teaming_planner/system_pose_cp"/>
+      <remap from="/path_and_progress_cp" to="borealis_teaming_planner/path_and_progress_cp"/>
+      <remap from="/plannned_path_cp" to="borealis_teaming_planner/plannned_path_cp"/>
+      <remap from="/processed_path_of_agents_cp" to="borealis_teaming_planner/processed_path_of_agents_cp"/>
+      <remap from="/best_processed_path_cp" to="borealis_teaming_planner/best_processed_path_cp"/>
+      <remap from="/processed_go_there_path" to="processed_go_there_path"/>
+
+
+      <!-- <remap from="/system_pose" to="/iris1/system_pose"/>
+      <remap from="/pointcloud" to="/uav2/ouster/pointcloud2"/> -->
+            <!-- <remap from="/task" to="/task"/>
+      <remap from="/control_state" to="control/state"/> -->
+      <!-- <remap from= "/human_input_pose" to="/uav_all/follow_me_target_pose"/> -->
+    </node>
+  </group>
+</launch>

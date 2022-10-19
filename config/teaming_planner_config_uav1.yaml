@@ -1,0 +1,53 @@
+/uav1/borealis_teaming_planner/sourceSegmentId: 1
+/uav1/borealis_teaming_planner/modulePeriod: 0.025
+/uav1/borealis_teaming_planner/numOfAgents: 3
+/uav1/borealis_teaming_planner/intervalDistance: 0.5
+/uav1/borealis_teaming_planner/planningHorizon: 25
+/uav1/borealis_teaming_planner/desiredHeight: 1.2
+/uav1/borealis_teaming_planner/useUWB: yes
+/uav1/borealis_teaming_planner/UseOccupancyMap: false
+/uav1/borealis_teaming_planner/debugVerbose: true
+/uav1/borealis_teaming_planner/pointcloudCallbackVerbose: false
+/uav1/borealis_teaming_planner/agentPoseCallbackVerbose: false
+/uav1/borealis_teaming_planner/systemPoseCallbackVerbose: false # Pose that is passed into phase sync
+/uav1/borealis_teaming_planner/phaseSyncCallbackVerbose: false
+
+# pi /2 1.57079632679
+# pi /4 0.785398163397
+# pi /6 0.523598775598
+# pi /8 0.392699081699
+
+/uav1/borealis_teaming_planner/expiryDurationMicroSec: 15*1000000
+/uav1/borealis_teaming_planner/numberOfAzimuthDiscreteAnglesOnASide: 0
+/uav1/borealis_teaming_planner/resolutionAzimuthAngleRad: 0.0
+/uav1/borealis_teaming_planner/numberOfElevationDiscreteAnglesOnASide: 0
+/uav1/borealis_teaming_planner/resolutionElevationAngleRad: 0.0
+/uav1/borealis_teaming_planner/distanceToFollowBehind: 0.0
+/uav1/borealis_teaming_planner/localBoundingBoxForPathAlongX: 5.0
+/uav1/borealis_teaming_planner/localBoundingBoxForPathAlongY: 5.0
+/uav1/borealis_teaming_planner/localBoundingBoxForPathAlongZ: 2.0
+/uav1/borealis_teaming_planner/pointRemovalRadius: 0.90
+/uav1/borealis_teaming_planner/desiredDistanceInTriFormation: 3
+/uav1/borealis_teaming_planner/desiredDistanceInLineFormation: 1.5
+/uav1/borealis_teaming_planner/incrementOffsetToFormationYaw: 0.392699081699
+/uav1/borealis_teaming_planner/agentRadius: 0.5
+/uav1/borealis_teaming_planner/waypointReachedBoundary: 1.5
+/uav1/borealis_teaming_planner/weightForGoal: 0.05
+/uav1/borealis_teaming_planner/weightForRotation: 0.05
+/uav1/borealis_teaming_planner/weightForSize: 0.9
+/uav1/borealis_teaming_planner/priorityPenalty: 0.04
+
+# Path planner algos
+/uav1/borealis_teaming_planner/radius: 0.1
+/uav1/borealis_teaming_planner/cylinderHeight: 0.8
+/uav1/borealis_teaming_planner/mapResolution: 1.0
+/uav1/borealis_teaming_planner/mapMinBoundsX: -150.0
+/uav1/borealis_teaming_planner/mapMaxBoundsX: 150.0
+/uav1/borealis_teaming_planner/mapMinBoundsY: -150.0
+/uav1/borealis_teaming_planner/mapMaxBoundsY: 150.0
+/uav1/borealis_teaming_planner/mapMinBoundsZ: 1.0
+/uav1/borealis_teaming_planner/mapMaxBoundsZ: 2.0
+/uav1/borealis_teaming_planner/hCostWeight: 1.0
+/uav1/borealis_teaming_planner/potentialRadius: 1.5
+/uav1/borealis_teaming_planner/searchRadius: 1.5
+/uav1/borealis_teaming_planner/performJPS: true
